@@ -1,9 +1,11 @@
+import java.sql.SQLOutput;
+
 public class GrassPokemon extends Pokemon {
     private int sunhour;
     private double water;
 
-    public GrassPokemon(String name, String type, int sunhour, double water) {
-        super(name, type);
+    public GrassPokemon(String name, int sunhour, double water) {
+        super(name, "Grass");
         this.sunhour = sunhour;
         this.water = water;
     }
@@ -22,5 +24,19 @@ public class GrassPokemon extends Pokemon {
 
     public void setWater(double water) {
         this.water = water;
+    }
+
+    @Override
+    public String toString() {
+        return(getName() + " needs " + getSunlight() + " hours of sunlight a day \nand " + getWater() + " liter water to stay healthy.");
+    }
+
+    @Override
+    void printPokemonSound() {
+        System.out.println("Bulba Bulbasaur!");
+    }
+
+    public void solarbeam(){
+        System.out.println(getName() + " charged up a powerful solarbeam!");
     }
 }

@@ -2,8 +2,8 @@ public class FirePokemon extends Pokemon {
     private int flameheat;
     private int experience;
 
-    public FirePokemon(String name, String type, int flameheat, int experience) {
-        super(name, type);
+    public FirePokemon(String name, int flameheat, int experience) {
+        super(name, "Fire");
         this.flameheat = flameheat;
         this.experience = experience;
     }
@@ -24,12 +24,17 @@ public class FirePokemon extends Pokemon {
         this.experience = experience;
     }
 
-    public void printInfo() {
-        System.out.println("The heat of its flame is: " + getFlameheat() + " Celsius");
-        System.out.println("Experience needed to reach level 50: " + getExperience());
+    @Override
+    public String toString() {
+        return("The heat of its flame is: " + getFlameheat() + " Celsius \nExperience needed to reach level 50: " + getExperience());
+    }
+
+    @Override
+    void printPokemonSound() {
+        System.out.println("Char!");
     }
 
     public void flamethrower(){
-        System.out.println(getName() + " attacked with a flamethrower! \n The heat of the attack was " + getFlameheat() + " Celsius!");
+        System.out.println(getName() + " attacked with a flamethrower! \nThe heat of the attack was " + getFlameheat() + " Celsius!");
     }
 }

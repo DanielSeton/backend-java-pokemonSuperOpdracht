@@ -1,4 +1,4 @@
-public class Pokemon {
+public abstract class Pokemon {
     private String name;
     private String type;
 
@@ -23,7 +23,9 @@ public class Pokemon {
         this.type = type;
     }
 
-    public void printSound(){
+    abstract void printPokemonSound();
+
+    public void printInfo(){
         System.out.println("Pokemon: " + getName() + "\nType: " + getType());
     }
 }
