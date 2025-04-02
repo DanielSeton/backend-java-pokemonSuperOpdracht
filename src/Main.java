@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         FirePokemon Char = new FirePokemon("Charmander",  500, 120000);
         GrassPokemon Bulb = new GrassPokemon("Bulbasaur", 6, 2.5);
